@@ -1,0 +1,82 @@
+<!-- index.html -->
+
+<!-- Welcome to React, Next.JS learning sesh-->
+<!-- https://nextjs.org/learn/foundations/from-javascript-to-react/getting-started-with-react-->
+
+<!--
+  JSX lets you write Markdown in JS in a way that it understands. It has 3 rules
+  1. Things need to be CamelCased
+  2. All tags must be manually closed </>
+  3. If you want to have multiple elements in something, you must inclose in a <div> or empty tags <>
+-->
+
+<!-- React is a Javscript Library that lets you easily update the DOM to build UI's without writing redundant
+code that makes you append classes. React is declaritive instead of impertive, it figures out how to adjust the Dom for you instead of you telling it what to do
+It's also just a Javascript library so it doesn't really care what the rest of your stack is which is great
+-->
+
+<!-- Theres 3 Basic Ideas in React: -->
+
+<!--
+  1. Component - Usable bits of code to adjust the DOM. 
+
+  In React, Components are just functions with Return values in JSX.
+  Components must be capitalized to differentiate between normal js
+  Pass React Components like all HTML elements with angle brackets <>
+  
+  ReactDOM.render(Component, ElementID)
+  
+  <script>
+  function header() {
+    return (<h1>Develop. Preview. Ship. 🚀</h1>)
+  }
+  ReactDOM.render(<Header />, app)
+  </script>
+
+
+  -- Can also have nested components to build a nice component tree. --
+
+  This function is nesting the header comonent inside homepage. Then we can pass the Homepage component.
+  function HomePage() {
+  return (
+    <div>
+      {/* Nesting the Header component */}
+      <Header />
+    </div>
+    );
+  }
+  
+  ReactDOM.render(<HomePage />, app);
+-->
+
+<!-- 
+  2. Props - Passing Data between Components
+
+  Like how in HTML you can change the src of an img to change it, etc props are arguments that can be passed
+  to a react component, and change the state of something.
+
+  You can pass a prop like a class or ID in html,, all child components inherit the prop values
+  Can use props to change what's displayed. 
+  Ex. Pass prop {coloredHeart} in the child component that returns this string to change the copy of "I love coding {coloredHeart}".
+  Read More: https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props
+-->
+
+<!--
+  3. 
+-->
+
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/jsx">
+      
+      const app = document.getElementById("app");
+
+    </script>
+  </body>
+</html>
