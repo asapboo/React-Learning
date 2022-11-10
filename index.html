@@ -59,10 +59,53 @@ It's also just a Javascript library so it doesn't really care what the rest of y
   Can use props to change what's displayed. 
   Ex. Pass prop {coloredHeart} in the child component that returns this string to change the copy of "I love coding {coloredHeart}".
   Read More: https://nextjs.org/learn/foundations/from-javascript-to-react/displaying-data-with-props
+
+  ** You can use {} to tap in & out of JS inside of React
+
+  function Header({ title }) {
+  return <h1>{title ? title : 'Default title'}</h1>;
+
+  function Page() {
+  return (
+    <div>
+      <Header title="React 💙" />
+      <Header title="A new title" />
+    </div>
+  );
+}
+ReactDOM.render(<Page />, app);
 -->
 
 <!--
-  3. 
+  3. States
+
+  States help us use event handlers to change them!
+  onClick={} is a REACT event that lets us change the state, React has a bunch of camelCased events that let us change the state of things
+  onChange for input fields
+  onSubmit for forms
+
+  React has set of hooks you can use to add additional logic to your states ->>> useState()
+  useState() returns an array where the first value is the state value, and the second items is the function to update the value [stateValue, Function]
+
+  Counts the number of times the Likes Button has been Clicked, initalized at 0;
+  function HomePage() {
+  // ...
+  const [likes, setLikes] = React.useState(0);
+
+  function handleClick() {
+    setLikes(likes + 1);
+  }
+
+  return (
+    <div>
+      {/* ... */}
+      <button onClick={handleClick}>Likes ({likes})</button>
+    </div>
+  );
+}
+
+Note** Props only pass data but changes to states can be permananet! 
+
 -->
 
 <html>
